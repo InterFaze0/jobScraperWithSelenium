@@ -13,7 +13,7 @@ for pageNumber in range(1,3):
     for job in soup:
         job_dict = {
             "Job Title":job.find("h2",class_ ="h5 mb-0 mr-2 job-tile-title").text,
-            "Link": job.find("a",class_= "up-n-link")["href"]
+            "Link": "https://www.upwork.com"+job.find("a",class_= "up-n-link")["href"]
         }
         job_list.append(job_dict)
 
